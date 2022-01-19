@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import CardExample from './Card';
 import styles from './Cards.module.css';
 
-const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
+const Cards = ({ data: { confirmed, deaths, lastUpdate } }) => {
   if (!confirmed) {
     return 'Loading...';
   }
@@ -17,14 +17,6 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           cardTitle="Confirmés"
           value={confirmed.value}
           cardDiscription="Nombre de cas confirmé de COVID-19"
-          lastUpdate={lastUpdate}
-        />
-
-        <CardExample
-          className={styles.recovered}
-          cardTitle="Guérisons"
-          value={recovered.value}
-          cardDiscription="Nombre de cas guéri de COVID-19"
           lastUpdate={lastUpdate}
         />
 
